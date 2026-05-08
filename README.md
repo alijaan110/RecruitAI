@@ -149,18 +149,57 @@ Change this in production by setting `ADMIN_SECRET_KEY` in your environment (see
 
 ## Deployment
 
-### Docker / Railway
+### Railway (Recommended)
+
+Railway provides managed PostgreSQL and easy Docker deployments. Deploy backend and frontend as separate services:
+
+#### 1. Backend Service
+- **Source**: Connect to your GitHub repo
+- **Root Directory**: `backend/`
+- **Environment Variables**:
+  ```
+  APP_ENV=production
+  DEBUG=false
+  DATABASE_URL=postgresql+asyncpg://user:pass@host:5432/recruitai  # Railway will provide this
+  ALLOWED_ORIGINS=["https://your-frontend-url.railway.app"]
+  JWT_SECRET_KEY=your-32-char-secret-key
+  ADMIN_SECRET_KEY=your-admin-secret-key
+  SIGNED_URL_BASE=https://your-backend-url.railway.app
+  SIGNED_URL_SECRET=your-signed-url-secret
+  DEFAULT_LLM_PROVIDER=mock  # or openai/gemini/deepseek
+  DEFAULT_LLM_MODEL=mock-model
+  OPENAI_API_KEY=your-openai-key
+  GEMINI_API_KEY=your-gemini-key
+  DEEPSEEK_API_KEY=your-deepseek-key
+  RESEND_API_KEY=your-resend-key
+  LOCAL_STORAGE_PATH=/app/uploads
+  ```
+
+#### 2. Frontend Service
+- **Source**: Same GitHub repo
+- **Root Directory**: `frontend/`
+- **Build Command**: `npm run build`
+- **Start Command**: `npm start`
+- **Environment Variables**:
+  ```
+  NEXT_PUBLIC_API_URL=https://your-backend-url.railway.app
+  ```
+
+#### 3. Database
+- Add a PostgreSQL database service in Railway
+- Copy the `DATABASE_URL` to your backend service
+
+#### 4. Domain Setup
+- Set custom domains for both services
+- Update `ALLOWED_ORIGINS` and `NEXT_PUBLIC_API_URL` accordingly
+
+### Docker Compose (Local/Development)
 
 ```bash
 docker compose up --build
 ```
 
-Frontend at :3000, backend at :8000. Volumes (`backend_db`, `backend_uploads`) are persistent.
-
-For Railway deployment:
-
-- **Backend Service**: Set `DATABASE_URL` (postgres), `JWT_SECRET_KEY`, `ADMIN_SECRET_KEY`, `ALLOWED_ORIGINS`, `APP_ENV=production`
-- **Frontend Service**: Set `NEXT_PUBLIC_API_URL` pointing to the backend's public URL
+Frontend at :3000, backend at :8000. Volumes (`backend_uploads`) are persistent.
 
 ## API Documentation
 
