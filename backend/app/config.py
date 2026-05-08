@@ -47,10 +47,30 @@ class Settings(BaseSettings):
 
     @property
     def parsed_allowed_origins(self) -> List[str]:
+        # Handle empty or missing variable
+        if not self.ALLOWED_ORIGINS:
+            return ["http://localhost:3000"]
+            
         try:
-            return json.loads(self.ALLOWED_ORIGINS)
+            # Try parsing as JSON list
+            origins = json.loads(self.ALLOWED_ORIGINS)
+            if isinstance(origins, str):
+                origins = [origins]
         except json.JSONDecodeError:
-            return [o.strip() for o in self.ALLOWED_ORIGINS.split(",") if o.strip()] or ["http://localhost:3000"]
+            # Fallback: Split by comma and clean up characters like [], " and '
+            raw = self.ALLOWED_ORIGINS.translate(str.maketrans('', '', '[]"\''))
+            origins = [o.strip() for o in raw.split(",") if o.strip()]
+
+        # Ensure all origins are cleaned and include variations
+        final_origins = []
+        for o in origins:
+            clean_o = o.rstrip("/")
+            final_origins.append(clean_o)
+            # Standard practice: allow both https and http if not specified carefully
+            if clean_o.startswith("https://"):
+                final_origins.append(clean_o.replace("https://", "http://"))
+        
+        return list(set(final_origins)) or ["http://localhost:3000"]
 
 
 settings = Settings()
