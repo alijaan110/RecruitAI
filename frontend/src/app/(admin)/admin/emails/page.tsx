@@ -3,8 +3,8 @@
 import * as React from "react"
 import { useQuery } from "@tanstack/react-query"
 import { Loader2 } from "lucide-react"
-import { adminApi } from "@/src/lib/admin-api"
-import { formatTimeAgo } from "@/src/lib/utils"
+import { adminApi } from "@/lib/admin-api"
+import { formatTimeAgo } from "@/lib/utils"
 
 export default function AdminEmailsPage() {
   const { data, isLoading } = useQuery({

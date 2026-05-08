@@ -3,9 +3,9 @@
 import * as React from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { Loader2, CheckCircle2, XCircle, Save, FlaskConical } from "lucide-react"
-import { adminApi } from "@/src/lib/admin-api"
-import { Button } from "@/src/components/ui/button"
-import { Input } from "@/src/components/ui/input"
+import { adminApi } from "@/lib/admin-api"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { toast } from "sonner"
 
 const PROVIDER_MODELS: Record<string, string[]> = {

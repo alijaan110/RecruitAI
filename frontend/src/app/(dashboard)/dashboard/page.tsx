@@ -1,13 +1,13 @@
 "use client"
 
 import * as React from "react"
-import { useDashboardStats } from "@/src/hooks/useDashboard"
-import { PageHeader } from "@/src/components/layout/PageHeader"
-import { StatsGrid } from "@/src/components/dashboard/StatsGrid"
-import { StageChart } from "@/src/components/dashboard/StageChart"
-import { RecentApps } from "@/src/components/dashboard/RecentApps"
-import { LoadingSkeleton } from "@/src/components/shared/LoadingSkeleton"
-import { auth } from "@/src/lib/auth"
+import { useDashboardStats } from "@/hooks/useDashboard"
+import { PageHeader } from "@/components/layout/PageHeader"
+import { StatsGrid } from "@/components/dashboard/StatsGrid"
+import { StageChart } from "@/components/dashboard/StageChart"
+import { RecentApps } from "@/components/dashboard/RecentApps"
+import { LoadingSkeleton } from "@/components/shared/LoadingSkeleton"
+import { auth } from "@/lib/auth"
 
 export default function DashboardPage() {
   const { data: stats, isLoading, error } = useDashboardStats()

@@ -2,8 +2,8 @@
 
 import * as React from "react"
 import { Bell } from "lucide-react"
-import { auth } from "@/src/lib/auth"
-import { initials } from "@/src/lib/utils"
+import { auth } from "@/lib/auth"
+import { initials } from "@/lib/utils"
 
 export function AppHeader() {
   const user = auth.getUser()

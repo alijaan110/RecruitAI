@@ -3,23 +3,23 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { Search, Plus, MoreHorizontal, ArrowRight, Pencil, Trash, XCircle, Play } from "lucide-react"
-import { useJobs, usePublishJob, useCloseJob } from "@/src/hooks/useJobs"
-import { Job } from "@/src/types/job"
-import { PageHeader } from "@/src/components/layout/PageHeader"
-import { Button } from "@/src/components/ui/button"
-import { Input } from "@/src/components/ui/input"
-import { Tabs, TabsList, TabsTrigger } from "@/src/components/ui/tabs"
-import { DataTable } from "@/src/components/shared/DataTable"
-import { JobStatusBadge } from "@/src/components/jobs/JobStatusBadge"
-import { ScoreBadge } from "@/src/components/candidates/ScoreBadge"
-import { formatDate } from "@/src/lib/utils"
+import { useJobs, usePublishJob, useCloseJob } from "@/hooks/useJobs"
+import { Job } from "@/types/job"
+import { PageHeader } from "@/components/layout/PageHeader"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { DataTable } from "@/components/shared/DataTable"
+import { JobStatusBadge } from "@/components/jobs/JobStatusBadge"
+import { ScoreBadge } from "@/components/candidates/ScoreBadge"
+import { formatDate } from "@/lib/utils"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
-} from "@/src/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu"
 import { ColumnDef } from "@tanstack/react-table"
 
 export default function JobsPage() {

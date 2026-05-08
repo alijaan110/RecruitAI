@@ -7,10 +7,10 @@ import { z } from "zod"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Loader2 } from "lucide-react"
-import { Button } from "@/src/components/ui/button"
-import { Input } from "@/src/components/ui/input"
-import { authApi } from "@/src/lib/api"
-import { auth } from "@/src/lib/auth"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { authApi } from "@/lib/api"
+import { auth } from "@/lib/auth"
 
 const registerSchema = z.object({
   company_name: z.string().min(2, "Company name must be at least 2 characters"),

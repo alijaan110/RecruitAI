@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { JobStatus } from "@/src/types/job"
+import { JobStatus } from "@/types/job"
 
 export function JobStatusBadge({ status }: { status: JobStatus }) {
   const styles: Record<JobStatus, string> = {

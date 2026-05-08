@@ -4,8 +4,8 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { LayoutDashboard, Briefcase, Users, Settings, LogOut } from "lucide-react"
-import { cn, initials } from "@/src/lib/utils"
-import { auth } from "@/src/lib/auth"
+import { cn, initials } from "@/lib/utils"
+import { auth } from "@/lib/auth"
 
 export function AppSidebar() {
   const pathname = usePathname()

@@ -2,9 +2,9 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { auth } from "@/src/lib/auth"
-import { AppSidebar } from "@/src/components/layout/AppSidebar"
-import { AppHeader } from "@/src/components/layout/AppHeader"
+import { auth } from "@/lib/auth"
+import { AppSidebar } from "@/components/layout/AppSidebar"
+import { AppHeader } from "@/components/layout/AppHeader"
 import { Loader2 } from "lucide-react"
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {

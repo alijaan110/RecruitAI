@@ -5,8 +5,8 @@ import {
   CheckCircle2, AlertTriangle, AlertCircle, Brain, Sparkles,
   Loader2, RotateCw, ShieldCheck, ShieldAlert, BadgeCheck
 } from "lucide-react"
-import { Button } from "@/src/components/ui/button"
-import { applicationsApi } from "@/src/lib/api"
+import { Button } from "@/components/ui/button"
+import { applicationsApi } from "@/lib/api"
 import { toast } from "sonner"
 
 type Recommendation = "shortlist" | "review" | "skip"

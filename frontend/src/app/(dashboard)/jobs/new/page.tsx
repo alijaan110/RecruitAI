@@ -2,9 +2,9 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { useCreateJob, usePublishJob } from "@/src/hooks/useJobs"
-import { PageHeader } from "@/src/components/layout/PageHeader"
-import { JobForm } from "@/src/components/jobs/JobForm"
+import { useCreateJob, usePublishJob } from "@/hooks/useJobs"
+import { PageHeader } from "@/components/layout/PageHeader"
+import { JobForm } from "@/components/jobs/JobForm"
 
 export default function NewJobPage() {
   const createMutation = useCreateJob()

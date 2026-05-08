@@ -4,8 +4,8 @@ import * as React from "react"
 import { useParams } from "next/navigation"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { Loader2 } from "lucide-react"
-import { adminApi } from "@/src/lib/admin-api"
-import { formatDate } from "@/src/lib/utils"
+import { adminApi } from "@/lib/admin-api"
+import { formatDate } from "@/lib/utils"
 import { toast } from "sonner"
 
 export default function AdminTenantDetail() {

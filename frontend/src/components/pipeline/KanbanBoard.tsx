@@ -1,10 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { Application } from "@/src/types/application"
+import { Application } from "@/types/application"
 import { KanbanColumn } from "./KanbanColumn"
-import { usePipelineData, useKanbanMove } from "@/src/hooks/usePipeline"
-import { AppStage } from "@/src/types/application"
+import { usePipelineData, useKanbanMove } from "@/hooks/usePipeline"
+import { AppStage } from "@/types/application"
 import { LoadingSkeleton } from "../shared/LoadingSkeleton"
 import {
   DndContext,

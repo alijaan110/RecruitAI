@@ -3,8 +3,8 @@
 import * as React from "react"
 import { useQuery, useMutation } from "@tanstack/react-query"
 import { Loader2, Building2, Users, Briefcase, FileText, TrendingUp, Database } from "lucide-react"
-import { adminApi } from "@/src/lib/admin-api"
-import { Button } from "@/src/components/ui/button"
+import { adminApi } from "@/lib/admin-api"
+import { Button } from "@/components/ui/button"
 import { toast } from "sonner"
 
 function StatCard({ label, value, icon: Icon, color }: { label: string; value: string | number; icon: any; color: string }) {

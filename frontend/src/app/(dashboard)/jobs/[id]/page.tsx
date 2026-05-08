@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { useJob } from "@/src/hooks/useJobs"
-import { PageHeader } from "@/src/components/layout/PageHeader"
-import { JobStatusBadge } from "@/src/components/jobs/JobStatusBadge"
-import { Button } from "@/src/components/ui/button"
+import { useJob } from "@/hooks/useJobs"
+import { PageHeader } from "@/components/layout/PageHeader"
+import { JobStatusBadge } from "@/components/jobs/JobStatusBadge"
+import { Button } from "@/components/ui/button"
 import { ArrowLeft, Pencil, Users, ExternalLink } from "lucide-react"
-import { formatDate } from "@/src/lib/utils"
-import { LoadingSkeleton } from "@/src/components/shared/LoadingSkeleton"
+import { formatDate } from "@/lib/utils"
+import { LoadingSkeleton } from "@/components/shared/LoadingSkeleton"
 
 export default function JobDetailPage({ params }: { params: { id: string } }) {
   const { data: job, isLoading } = useJob(params.id)

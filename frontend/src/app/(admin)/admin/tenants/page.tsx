@@ -4,9 +4,9 @@ import * as React from "react"
 import Link from "next/link"
 import { useQuery } from "@tanstack/react-query"
 import { Loader2 } from "lucide-react"
-import { adminApi } from "@/src/lib/admin-api"
-import { Input } from "@/src/components/ui/input"
-import { formatDate } from "@/src/lib/utils"
+import { adminApi } from "@/lib/admin-api"
+import { Input } from "@/components/ui/input"
+import { formatDate } from "@/lib/utils"
 
 export default function AdminTenantsPage() {
   const [search, setSearch] = React.useState("")

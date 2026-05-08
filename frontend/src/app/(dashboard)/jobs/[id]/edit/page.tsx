@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { useJob, useUpdateJob } from "@/src/hooks/useJobs"
-import { PageHeader } from "@/src/components/layout/PageHeader"
-import { JobForm } from "@/src/components/jobs/JobForm"
-import { LoadingSkeleton } from "@/src/components/shared/LoadingSkeleton"
+import { useJob, useUpdateJob } from "@/hooks/useJobs"
+import { PageHeader } from "@/components/layout/PageHeader"
+import { JobForm } from "@/components/jobs/JobForm"
+import { LoadingSkeleton } from "@/components/shared/LoadingSkeleton"
 
 export default function EditJobPage({ params }: { params: { id: string } }) {
   const { data: job, isLoading } = useJob(params.id)

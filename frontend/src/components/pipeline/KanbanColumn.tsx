@@ -3,9 +3,9 @@
 import * as React from "react"
 import { useDroppable } from "@dnd-kit/core"
 import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable"
-import { Application, AppStage } from "@/src/types/application"
+import { Application, AppStage } from "@/types/application"
 import { CandidateCard } from "./CandidateCard"
-import { cn } from "@/src/lib/utils"
+import { cn } from "@/lib/utils"
 
 interface KanbanColumnProps {
   stage: AppStage;

@@ -3,9 +3,9 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { Loader2, ShieldCheck } from "lucide-react"
-import { Button } from "@/src/components/ui/button"
-import { Input } from "@/src/components/ui/input"
-import { adminAuth, adminApi } from "@/src/lib/admin-api"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { adminAuth, adminApi } from "@/lib/admin-api"
 import { toast } from "sonner"
 
 export default function AdminLoginPage() {

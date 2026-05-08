@@ -3,10 +3,10 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
-import { useJob } from "@/src/hooks/useJobs"
-import { KanbanBoard } from "@/src/components/pipeline/KanbanBoard"
-import { PageHeader } from "@/src/components/layout/PageHeader"
-import { Button } from "@/src/components/ui/button"
+import { useJob } from "@/hooks/useJobs"
+import { KanbanBoard } from "@/components/pipeline/KanbanBoard"
+import { PageHeader } from "@/components/layout/PageHeader"
+import { Button } from "@/components/ui/button"
 
 export default function PipelinePage({ params }: { params: { id: string } }) {
   const router = useRouter()

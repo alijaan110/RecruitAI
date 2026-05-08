@@ -3,10 +3,10 @@
 import * as React from "react"
 import Link from "next/link"
 import { Users } from "lucide-react"
-import { formatTimeAgo, initials } from "@/src/lib/utils"
+import { formatTimeAgo, initials } from "@/lib/utils"
 import { StageBadge } from "../candidates/StageBadge"
 import { EmptyState } from "../shared/EmptyState"
-import type { AppStage } from "@/src/types/application"
+import type { AppStage } from "@/types/application"
 
 interface RecentAppRow {
   id: string;

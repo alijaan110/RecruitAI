@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useQuery } from "@tanstack/react-query"
 import { CheckCircle2, XCircle, Loader2, Database, Cpu, Brain, HardDrive, Clock, Cloud } from "lucide-react"
-import { adminApi } from "@/src/lib/admin-api"
+import { adminApi } from "@/lib/admin-api"
 
 function HealthCard({ icon: Icon, title, ok, children }: { icon: any; title: string; ok: boolean; children?: React.ReactNode }) {
   return (

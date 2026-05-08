@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { auth } from "@/src/lib/auth"
-import { Input } from "@/src/components/ui/input"
-import { Button } from "@/src/components/ui/button"
+import { auth } from "@/lib/auth"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 export default function GeneralSettingsPage() {
   const user = auth.getUser()

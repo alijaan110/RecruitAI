@@ -3,8 +3,8 @@
 import * as React from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { Loader2 } from "lucide-react"
-import { adminAuth } from "@/src/lib/admin-api"
-import { AdminSidebar } from "@/src/components/admin/AdminSidebar"
+import { adminAuth } from "@/lib/admin-api"
+import { AdminSidebar } from "@/components/admin/AdminSidebar"
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()

@@ -2,13 +2,13 @@
 
 import * as React from "react"
 import { useQuery, useMutation } from "@tanstack/react-query"
-import { billingApi, PlanUsage } from "@/src/lib/api"
-import { auth } from "@/src/lib/auth"
-import { Button } from "@/src/components/ui/button"
+import { billingApi, PlanUsage } from "@/lib/api"
+import { auth } from "@/lib/auth"
+import { Button } from "@/components/ui/button"
 import { Check, Loader2, Minus } from "lucide-react"
 import { toast } from "sonner"
-import { cn } from "@/src/lib/utils"
-import { LoadingSkeleton } from "@/src/components/shared/LoadingSkeleton"
+import { cn } from "@/lib/utils"
+import { LoadingSkeleton } from "@/components/shared/LoadingSkeleton"
 
 export default function BillingSettingsPage() {
   const { data: usage, isLoading } = useQuery({

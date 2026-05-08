@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { DashboardStats } from "@/src/lib/api"
+import { DashboardStats } from "@/lib/api"
 import { Briefcase, Users, CalendarCheck, BarChart2, LucideIcon } from "lucide-react"
-import { cn } from "@/src/lib/utils"
+import { cn } from "@/lib/utils"
 
 interface StatCardProps {
   title: string;

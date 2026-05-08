@@ -6,8 +6,8 @@ import { usePathname, useRouter } from "next/navigation"
 import {
   LayoutDashboard, Building2, Users, Cpu, Mail, Activity, ArrowLeft, LogOut
 } from "lucide-react"
-import { cn } from "@/src/lib/utils"
-import { adminAuth } from "@/src/lib/admin-api"
+import { cn } from "@/lib/utils"
+import { adminAuth } from "@/lib/admin-api"
 
 const NAV = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },

@@ -5,10 +5,10 @@ import { useSortable } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
 import { useRouter } from "next/navigation"
 import { Star } from "lucide-react"
-import { Application } from "@/src/types/application"
-import { formatTimeAgo, initials, cn } from "@/src/lib/utils"
+import { Application } from "@/types/application"
+import { formatTimeAgo, initials, cn } from "@/lib/utils"
 import { ScoreBadge } from "../candidates/ScoreBadge"
-import { useStarApplication } from "@/src/hooks/useApplications"
+import { useStarApplication } from "@/hooks/useApplications"
 
 interface CandidateCardProps {
   app: Application;

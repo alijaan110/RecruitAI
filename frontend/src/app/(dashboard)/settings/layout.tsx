@@ -3,8 +3,8 @@
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { PageHeader } from "@/src/components/layout/PageHeader"
-import { cn } from "@/src/lib/utils"
+import { PageHeader } from "@/components/layout/PageHeader"
+import { cn } from "@/lib/utils"
 
 export default function SettingsLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()

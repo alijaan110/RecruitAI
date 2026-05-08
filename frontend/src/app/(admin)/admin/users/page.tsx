@@ -3,10 +3,10 @@
 import * as React from "react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { Loader2 } from "lucide-react"
-import { adminApi } from "@/src/lib/admin-api"
-import { Input } from "@/src/components/ui/input"
-import { Button } from "@/src/components/ui/button"
-import { formatDate } from "@/src/lib/utils"
+import { adminApi } from "@/lib/admin-api"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { formatDate } from "@/lib/utils"
 import { toast } from "sonner"
 
 export default function AdminUsersPage() {

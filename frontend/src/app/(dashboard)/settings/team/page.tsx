@@ -1,13 +1,13 @@
 "use client"
 
 import * as React from "react"
-import { auth } from "@/src/lib/auth"
-import { authApi } from "@/src/lib/api"
-import { Button } from "@/src/components/ui/button"
-import { Input } from "@/src/components/ui/input"
+import { auth } from "@/lib/auth"
+import { authApi } from "@/lib/api"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { Loader2, Plus, Users, Trash } from "lucide-react"
 import { toast } from "sonner"
-import { initials } from "@/src/lib/utils"
+import { initials } from "@/lib/utils"
 import {
   Dialog,
   DialogContent,
@@ -15,7 +15,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/src/components/ui/dialog"
+} from "@/components/ui/dialog"
 
 export default function TeamSettingsPage() {
   const user = auth.getUser()

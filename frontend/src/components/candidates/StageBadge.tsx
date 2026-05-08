@@ -1,5 +1,5 @@
-import { cn } from "@/src/lib/utils"
-import { AppStage } from "@/src/types/application"
+import { cn } from "@/lib/utils"
+import { AppStage } from "@/types/application"
 
 interface StageBadgeProps {
   stage: AppStage;
