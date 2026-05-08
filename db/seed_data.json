@@ -1,0 +1,73 @@
+{
+  "tenants": [
+    {"name": "TechCorp Pakistan", "slug": "techcorp-pakistan", "plan": "free"},
+    {"name": "Netsol Technologies", "slug": "netsol-technologies", "plan": "pro"},
+    {"name": "Systems Limited", "slug": "systems-limited", "plan": "enterprise"}
+  ],
+  "users": [
+    {"email": "admin@techcorp.com", "full_name": "Admin TechCorp", "password": "password123", "role": "admin", "tenant": "techcorp-pakistan"},
+    {"email": "recruiter@techcorp.com", "full_name": "Recruiter TechCorp", "password": "password123", "role": "recruiter", "tenant": "techcorp-pakistan"},
+    {"email": "admin@netsol.com", "full_name": "Admin Netsol", "password": "password123", "role": "admin", "tenant": "netsol-technologies"},
+    {"email": "recruiter@netsol.com", "full_name": "Recruiter Netsol", "password": "password123", "role": "recruiter", "tenant": "netsol-technologies"},
+    {"email": "admin@systems.com", "full_name": "Admin Systems", "password": "password123", "role": "admin", "tenant": "systems-limited"},
+    {"email": "recruiter@systems.com", "full_name": "Recruiter Systems", "password": "password123", "role": "recruiter", "tenant": "systems-limited"}
+  ],
+  "jobs": [
+    {
+      "title": "Senior Frontend Engineer",
+      "department": "Engineering",
+      "location": "Lahore, PK",
+      "employment_type": "full_time",
+      "description": "We are hiring a senior frontend engineer to ship our customer-facing platform. You will own architecture, performance, and UX quality across React/Next.js apps.",
+      "requirements": ["3+ years React", "TypeScript", "Next.js"],
+      "keywords": ["React", "TypeScript", "Next.js", "JavaScript", "CSS", "HTML", "Tailwind"],
+      "status": "published",
+      "tenant": "techcorp-pakistan",
+      "public_slug": "senior-frontend-engineer-techcorp"
+    },
+    {
+      "title": "Backend Python Developer",
+      "department": "Engineering",
+      "location": "Karachi, PK",
+      "employment_type": "full_time",
+      "description": "Build and operate the backend services powering RecruitAI. Python first, async heavy.",
+      "requirements": ["Python 3.11", "FastAPI or Django", "PostgreSQL"],
+      "keywords": ["Python", "FastAPI", "Django", "PostgreSQL", "REST", "Docker", "SQL"],
+      "status": "published",
+      "tenant": "techcorp-pakistan",
+      "public_slug": "backend-python-developer-techcorp"
+    },
+    {
+      "title": "Product Manager",
+      "department": "Product",
+      "location": "Remote",
+      "employment_type": "full_time",
+      "description": "Own the product roadmap. Talk to recruiters, scope features, and ship outcomes.",
+      "requirements": ["3+ years PM experience", "Agile", "Scrum"],
+      "keywords": ["Product Management", "Agile", "Scrum", "Jira"],
+      "status": "draft",
+      "tenant": "techcorp-pakistan",
+      "public_slug": "product-manager-techcorp"
+    }
+  ],
+  "candidates": [
+    {"full_name": "Ahmed Khan", "email": "ahmed.khan@example.com", "tenant": "techcorp-pakistan", "skills": ["React", "TypeScript", "Next.js", "CSS"]},
+    {"full_name": "Sara Ahmed", "email": "sara.ahmed@example.com", "tenant": "techcorp-pakistan", "skills": ["React", "JavaScript", "CSS"]},
+    {"full_name": "Ali Raza", "email": "ali.raza@example.com", "tenant": "techcorp-pakistan", "skills": ["Angular", "JavaScript"]},
+    {"full_name": "Fatima Malik", "email": "fatima.malik@example.com", "tenant": "techcorp-pakistan", "skills": ["React", "TypeScript", "Next.js", "GraphQL"]},
+    {"full_name": "Bilal Hassan", "email": "bilal.hassan@example.com", "tenant": "techcorp-pakistan", "skills": ["Python", "FastAPI", "PostgreSQL"]},
+    {"full_name": "Aisha Siddiq", "email": "aisha.siddiq@example.com", "tenant": "techcorp-pakistan", "skills": ["Python", "Django", "MySQL"]},
+    {"full_name": "Omar Sheikh", "email": "omar.sheikh@example.com", "tenant": "techcorp-pakistan", "skills": ["Node.js", "Express", "MongoDB"]},
+    {"full_name": "Zara Qureshi", "email": "zara.qureshi@example.com", "tenant": "techcorp-pakistan", "skills": ["Python", "Flask", "PostgreSQL", "Docker"]}
+  ],
+  "applications": [
+    {"candidate_email": "ahmed.khan@example.com", "job_title": "Senior Frontend Engineer", "stage": "interview", "score": 85},
+    {"candidate_email": "sara.ahmed@example.com", "job_title": "Senior Frontend Engineer", "stage": "screening", "score": 68},
+    {"candidate_email": "ali.raza@example.com", "job_title": "Senior Frontend Engineer", "stage": "rejected", "score": 42},
+    {"candidate_email": "fatima.malik@example.com", "job_title": "Senior Frontend Engineer", "stage": "offer", "score": 92},
+    {"candidate_email": "bilal.hassan@example.com", "job_title": "Backend Python Developer", "stage": "interview", "score": 88},
+    {"candidate_email": "aisha.siddiq@example.com", "job_title": "Backend Python Developer", "stage": "screening", "score": 72},
+    {"candidate_email": "omar.sheikh@example.com", "job_title": "Backend Python Developer", "stage": "rejected", "score": 38},
+    {"candidate_email": "zara.qureshi@example.com", "job_title": "Backend Python Developer", "stage": "received", "score": 84}
+  ]
+}

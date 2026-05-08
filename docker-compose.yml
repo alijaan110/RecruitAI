@@ -1,0 +1,47 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    image: recruitai-backend:latest
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DEBUG: ${DEBUG:-true}
+      DATABASE_URL: ${DATABASE_URL:-sqlite+aiosqlite:////app/db/recruitai.db}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-["http://localhost:3000"]}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-change-this-32-chars-minimum-secret}
+      ADMIN_SECRET_KEY: ${ADMIN_SECRET_KEY:-admin-secret-key}
+      SIGNED_URL_BASE: ${SIGNED_URL_BASE:-http://localhost:8000}
+      SIGNED_URL_SECRET: ${SIGNED_URL_SECRET:-local-secret-for-signed-urls}
+      DEFAULT_LLM_PROVIDER: ${DEFAULT_LLM_PROVIDER:-mock}
+      DEFAULT_LLM_MODEL: ${DEFAULT_LLM_MODEL:-mock-model}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      LOCAL_STORAGE_PATH: /app/uploads
+    volumes:
+      - backend_db:/app/db
+      - backend_uploads:/app/uploads
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+    image: recruitai-frontend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+      # Used by Next.js server components for SSR fetches inside the docker network.
+      INTERNAL_API_URL: ${INTERNAL_API_URL:-http://backend:8000}
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend_db:
+  backend_uploads:
